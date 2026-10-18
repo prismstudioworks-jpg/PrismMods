@@ -6,6 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(() => {
   return {
+
+    base: '/PrismMods/'
     plugins: [
       react(), 
       tailwindcss(),
@@ -15,15 +17,15 @@ export default defineConfig(() => {
         filename: 'sw.ts',
         registerType: 'autoUpdate',
         manifest: {
-          id: '/',
+          id: './',
           name: 'PrismMods Bedrock Hub',
           short_name: 'PrismMods',
           description: 'Discover and download curated Minecraft Bedrock addons, texture packs, maps, and shaders.',
           theme_color: '#0f172a',
           background_color: '#020617',
           display: 'standalone',
-          start_url: '/',
-          scope: '/',
+          start_url: './',
+          scope: './',
           orientation: 'portrait',
           categories: ['education', 'utilities', 'games'],
           icons: [
